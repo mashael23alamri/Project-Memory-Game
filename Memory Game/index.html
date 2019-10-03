@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title>Memory Game</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/stylememory.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  </head>
+  <body>
+
+    <header class="head-log">
+     <div class="logo-img">
+       <img src="img/log.png" alt=""/>
+       <h1 id="name">MEMORY GAME</h1>
+     </header>
+   </div>
+   <br/>
+
+  <main>
+      <div class="score">
+        <div id="timer">
+             0:0:0
+        </div>
+        <div id="attempt">
+             My attempts: <span>0</span>
+        </div>
+        <div id="restart">
+            <button id="btreStart" onclick = ReStart()>ReStart</button>
+        </div>
+      </div>
+
+      <div class ="game-memory">
+      <!--Add a data attribute data-name for each card in order to access it from JavaScript.. -->
+      <div class ="card" data-name="raccoon">
+        <img class="front-face" src="img/raccoon.png" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="raccoon">
+        <img class="front-face" src="img/raccoon.png" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="turtle">
+        <img class="front-face" src="img/turtle.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="turtle">
+        <img class="front-face" src="img/turtle.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="owl">
+        <img class="front-face" src="img/owl.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="owl">
+        <img class="front-face" src="img/owl.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="fish">
+        <img class="front-face" src="img/fish.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="fish">
+        <img class="front-face" src="img/fish.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="deer">
+        <img class="front-face" src="img/deer.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="deer">
+        <img class="front-face" src="img/deer.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="elephant">
+        <img class="front-face" src="img/elephant.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="elephant">
+        <img class="front-face" src="img/elephant.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="bear">
+        <img class="front-face" src="img/bear.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="bear">
+        <img class="front-face" src="img/bear.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="ant">
+        <img class="front-face" src="img/ant.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+      <div class ="card" data-name="ant">
+        <img class="front-face" src="img/ant.jpg" alt=""/>
+        <img class="back-face" src="img/question.png" alt=""/>
+      </div>
+   </div>
+
+   <dialog id="dialog1">
+     <h1 id="win">That's Great!👏🎊</h1>
+      <br/>
+      <p id="time1"> ⏰ ُTime :<span id="time"></span></p>
+      <p id="attemp1"> 🔁 My Attempss :<span id="attemps"></span></p>
+      <p id="stars1"> 🌟 Stars :<span id="stars"></span></p>
+      <br/>
+      <div id="playagain">
+       <button id="plagain" onclick = playagain()>Play Again 😁</button>
+      </div>
+      <br/>
+
+   </dialog>
+ </main>
+
+   <br/>
+   <br/>
+   <footer class="container-fluid">
+      <div id="footinfor">
+        <p>Udacity Front-End Web Developer</p>
+        <p>Project: Memory Game, 3-Oct-2019 by Mashael Al-amri</p>
+         <a href="https://github.com/mashael23alamri">My github</a>
+      </div>
+  </footer>
+    <script src = "js/game.js" ></script>
+  </body>
+</html>
