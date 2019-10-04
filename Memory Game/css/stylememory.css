@@ -14,10 +14,23 @@
   color:#e60073;
   text-align: center;
   font-size: 20px;
-  padding-left: 34em;
+  padding-left: 31em;
 }
 
- #attempt , #restart{
+ul{
+  overflow: hidden;
+}
+
+li{
+  display: inline-block;
+
+  }
+
+.fa-star {
+   color: #FFD700;
+}
+
+ .mystars , #attempt , #restart{
   margin: 0 0 0 1em;
 }
 

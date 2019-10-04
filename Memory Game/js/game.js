@@ -1,6 +1,9 @@
 
 //Store all memory cards inside a variable..
 const cards = document.querySelectorAll('.card');
+//Store all mystars inside a variable..
+const numstar = document.querySelectorAll('.fa-star');
+let stlist = document.querySelectorAll('.mystar li');
 //Create logic to flip the card and set the false ..
 let invertedcard = false;
 //Create a variable so that no more than two cards are opened during the comparison..
@@ -72,11 +75,13 @@ let allcardsareopen =0;
      {
        //Call function Disable..
        Disable();
+
           //Each time two cards match the number increases by one..
           allcardsareopen+=1;
           //Condition if the value of the variable allcardsareopen equals 8 calls to a function thefinalresult..
           if(allcardsareopen == 8)
           {
+           stoptime();
            thefinalresult();
           }
 
@@ -135,15 +140,39 @@ let allcardsareopen =0;
 
   //Create a function to Player attempts..
   function myattempss() {
-     myattempts+=1;
-     document.getElementById("attempt").innerHTML = "  My attempts: "+ myattempts ;
-    }
+    myattempts+=1;
+    document.getElementById("attempt").innerHTML = "  My attempts: "+ myattempts ;
+
+    if (myattempts > 5 &&  myattempts <= 10){
+         for( i= 0; i < 3; i++){
+             if(i > 1){
+            numstar[i].style.visibility = "collapse";
+             }
+          }
+        }
+    else if (myattempts > 10 ){
+         for( i= 0; i < 3; i++){
+             if(i > 0){
+            numstar[i].style.visibility = "collapse";
+            }
+         }
+      }
+   }
 
   //Create a function to Remove all cards..
   function removeflipfromcards() {
       cards.forEach(card =>{
         card.className="card";
       });
+
+  }
+  //
+  function numberofstar() {
+
+  }
+  //stop the time ..
+  function stoptime() {
+    clearInterval(timer);
 
   }
   //Dialog function showing the final score of the player..
@@ -162,9 +191,10 @@ let allcardsareopen =0;
     if(myattempts <= 5)
     {
       document.getElementById("stars").innerHTML = " 🌟🌟🌟";
-    }
+      }
     if(myattempts > 5 &&  myattempts <= 10)
     {
+
       document.getElementById("stars").innerHTML = " 🌟🌟";
 
     }
